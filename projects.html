@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+    <link href="./Resources/projects.css" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/775d999329.js" crossorigin="anonymous"></script>
+    <title>Projects</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./projects.html">Projects</a></li>
+                <li class="nav-contact"><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Previous Projects</h1>
+
+    <main>
+        <!--main contents tabs-->
+        <div class="tab-container">
+            <div class="tabs">
+                <span data-tab-value="#tab_1" class="starting-tab">Tab 1</span>
+                <span data-tab-value="#tab_2">Tab 2</span>
+            </div>
+
+            <div class="tab-content">
+                <div class="tabs__tab active" id="tab_1" data-tab-info>
+                    <div class="tab-grid">
+                        <h2 class="title">Project 1</h2>
+                        <a class="project-link">Project 1 link</a><br>
+                        <a class="repo">Project 1 github repo link</a>
+                        <p class="description">Project 1 description</p>
+                        <img class="page-image" src="./Resources/Images/eftakher-alam-i1VQZsU86ok-unsplash.jpg" alt="Website Screenshot">
+                    </div>
+                </div>
+
+                <div class="tabs__tab" id="tab_2" data-tab-info>
+                    <div class="tab-grid">
+                    <h2 class="title">Project 2</h2>
+                    <a class="project-link">Project 2 link</a><br>
+                    <a class="repo">Project 2 github repo link</a>
+                    <p class="description">Project 2 description</p>
+                    <img class="page-image" src="./Resources/Images/eftakher-alam-i1VQZsU86ok-unsplash.jpg" alt="Website Screenshot">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--contact tab-->
+        <div class="contact-section">
+            <div class="contact-container">
+                <button id="contact-tab">
+                    <i class="fa-regular fa-envelope"></i>
+                    <p class="label">Contact</p>
+                </button>
+                <div id="contact-content">
+                    <p><a href="mailto:c.richards.webdesign@gmail.com">c.richards.webdesign@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="./Resources/script.js"></script>
+    <script src="./Resources/projects-script.js"></script>
+</body>
+</html>

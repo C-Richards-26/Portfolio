@@ -1,0 +1,261 @@
+/* reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+ 
+  * {
+    margin: 0;
+  }
+
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  input, button, textarea, select {
+    font: inherit;
+  }
+
+
+ /* main css */
+
+ * {
+    color: seashell;
+    background-color: hsl(201, 85%, 15%);
+    font-family: "Exo 2", sans-serif;
+  }
+
+  h1, h2, p {
+    margin-left: 2rem;
+  }
+
+  /* header section */
+  
+  header {
+    width: 100%;
+    height: 4rem;
+    border-bottom: 2px solid hsl(161, 92%, 47%);
+  }
+
+  nav {
+    float: right;
+    margin-top: 0.6rem;
+  }
+
+  li {
+    display: inline;
+    margin: 0 1rem;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+
+  a:hover {
+    color: hsl(161, 92%, 47%);
+  }
+
+  .nav-contact {
+    display: none;
+  }
+
+  @media only screen and (max-width: 750px) {
+    .nav-contact {
+      display: inline;
+    }
+
+    nav {
+      float: none;
+      padding-top: 1rem;
+      text-align: center;
+    }
+
+    li a {
+      font-size: 1.2rem;
+    }
+  }
+
+  @media only screen and (max-width: 333px) {
+    li a {
+      font-size: 1rem;
+    }
+  }
+
+/* main content */
+
+h1 {
+    margin-bottom: 2rem;
+}
+
+.container {
+    border: 1px solid grey;
+    margin: 1rem;
+}
+
+[data-tab-info] {
+    display: none;
+}
+
+.active[data-tab-info] {
+    display: block;
+}
+
+.tab-content {
+    margin-top: 1rem;
+    padding-left: 1rem;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.tab-content a {
+    margin-left: 2rem;
+}
+
+.tabs {
+    border-bottom: 1px solid hsl(161, 92%, 47%);
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    display: flex;
+    margin: 0;
+}
+
+.tabs span {
+    background: hsl(201, 85%, 15%);
+    padding: 10px;
+    border: 1px solid hsl(161, 92%, 47%);
+    border-radius: 10px 10px 0 0;
+}
+
+.tabs span:hover {
+    background: hsl(161, 92%, 47%);
+    cursor: pointer;
+    color: hsl(201, 85%, 15%);
+}
+
+.starting-tab {
+    margin-left: 3rem;
+}
+
+.tab-grid {
+  width: 100%;
+  display: grid;
+  grid-template: 40px 40px 80px 1fr / 5fr 4fr 1fr;
+  gap: 1rem;
+}
+
+.title {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.project-link {
+  grid-area: 2 / 1 / 3 / 2;
+  text-decoration: underline;
+}
+
+.repo {
+  grid-area: 3 / 1 / 4 / 2;
+  text-decoration: underline;
+}
+
+.project-link:hover, .repo:hover {
+  cursor: pointer;
+}
+
+.description {
+  grid-area: 4 / 1 / 5 / 2;
+}
+
+.page-image {
+  grid-area: 1 / 2 / 4 / 3;
+}
+
+@media only screen and (max-width: 740px) {
+  .tab-grid {
+    grid-template: 40px 40px 80px 1fr 1fr / 9fr 1fr;
+  }
+
+  .page-image {
+    grid-area: 5 / 1 / 6 / 2;
+    margin-left: 2rem;
+    padding-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  h1, h2, p, .page-image, .tab-content a {
+    margin-left: 1rem;
+  }
+}
+
+/* contact tab */
+
+.contact-section {
+  position: relative;
+} 
+
+.contact-container {
+  position: absolute;
+  right: 0;
+  display: inline-flex;
+}
+
+#contact-tab {
+  height: 10rem;
+  background-color: hsl(161, 92%, 47%);
+  color: hsl(201, 85%, 15%);
+  border-radius: 10px 0 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact-tab:hover {
+  cursor: pointer;
+}
+
+#contact-tab i, #contact-tab p {
+  background-color: hsl(161, 92%, 47%);
+  color: hsl(201, 85%, 15%);
+  margin: 0;
+}
+
+#contact-tab i {
+  font-size: 2rem;
+}
+
+#contact-tab p {
+  font-size: 1.5rem;
+}
+
+#contact-content {
+  display: none;
+  border-width: 2px 0 2px 0;
+  border-style: solid;
+  border-color: hsl(161, 92%, 47%);
+  border-radius: 5px 0 0 5px;
+  height: 10rem;
+  align-content: center;
+}
+
+#contact-content p {
+  margin-right: 3rem;
+}
+
+@media only screen and (max-width: 780px) {
+  .contact-container {
+    bottom: 15rem;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .contact-section {
+    display: none;
+  }
+}
